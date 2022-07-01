@@ -5,6 +5,6 @@
 
 <style lang='scss'>
     p{
-        color: red;
+        color: green;
     }
 </style>
