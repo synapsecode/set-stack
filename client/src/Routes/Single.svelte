@@ -23,7 +23,7 @@
     <button 
         class="mt-3 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
         on:click={async ()=>{
-            let x = (await (await fetch(`http://${window.location.hostname}/api/message`)).json())
+            let x = (await (await fetch(`${window.location.protocol}//${window.location.hostname}/api/message`)).json())
             alert(x['message']);
         }}
     >

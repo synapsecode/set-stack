@@ -13,9 +13,11 @@
 		"client-install": "cd client && yarn",
 		"serve:server": "nodemon server/server.js",
 		"serve:client": "cd client && yarn dev",
-		"app": "concurrently \"yarn serve:server\" \"yarn serve:client\"",
 		"build": "cd client && yarn build",
-		"start": "concurrently \"node server/server.js\" \"cd client && yarn start\""
+		"app": "concurrently \"node server/server.js\" \"cd client && yarn start\"",
+		"dev": "concurrently \"yarn serve:server\" \"yarn serve:client\"",
+		"prod":"APPMODE='PROD' node server/server.js",
+		"build-prod":"yarn build && yarn prod"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.6"
