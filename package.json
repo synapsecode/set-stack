@@ -1,7 +1,7 @@
 {
 	"name": "set-stack",
 	"version": "1.0.0",
-	"description": "A simple template to Develop Webapps using the SET Stack (Svelte Express Tailwind)",
+	"description": "A Simple Template to Develop Webapps using the SET Stack (Svelte Express Tailwind)",
 	"author": "Manas Hejmadi",
 	"license": "ISC",
 	"dependencies": {
@@ -10,7 +10,7 @@
 		"express": "^4.18.1"
 	},
 	"scripts": {
-		"install": "yarn && cd client && yarn",
+		"client-install": "cd client && yarn",
 		"serve:server": "nodemon server/server.js",
 		"serve:client": "cd client && yarn dev",
 		"app": "concurrently \"yarn serve:server\" \"yarn serve:client\"",
