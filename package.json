@@ -1,7 +1,7 @@
 {
 	"name": "set-stack",
 	"version": "1.0.0",
-	"description": "A Simple Template to Develop Webapps using the SET Stack (Svelte Express Tailwind)",
+	"description": "A simple template to Develop Webapps using the SET Stack (Svelte Express Tailwind)",
 	"author": "Manas Hejmadi",
 	"license": "ISC",
 	"dependencies": {
