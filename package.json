@@ -10,7 +10,7 @@
 		"express": "^4.18.1"
 	},
 	"scripts": {
-		"client-install": "cd client && yarn",
+		"install": "yarn && cd client && yarn",
 		"serve:server": "nodemon server/server.js",
 		"serve:client": "cd client && yarn dev",
 		"app": "concurrently \"yarn serve:server\" \"yarn serve:client\"",
