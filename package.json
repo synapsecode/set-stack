@@ -11,16 +11,18 @@
 	},
 	"scripts": {
 		"client-install": "cd client && yarn",
-		"serve:server": "nodemon server/server.js",
+		"serve:server": "nodemon index.js",
 		"serve:client": "cd client && yarn dev",
 		"build": "cd client && yarn build",
-		"app": "concurrently \"node server/server.js\" \"cd client && yarn start\"",
+		"app": "concurrently \"node index.js\" \"cd client && yarn start\"",
 		"dev": "concurrently \"yarn serve:server\" \"yarn serve:client\"",
-		"prod":"APPMODE='PROD' node server/server.js",
-		"build-prod":"yarn build && yarn prod"
+		"prod":"APPMODE='PROD' node index.js",
+		"build-prod":"yarn build && yarn prod",
+		"vercel-deploy":"yarn build && vercel",
+		"vercel-deploy-prod":"yarn build && vercel --prod"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.6"
 	},
-	"main": "server/server.js"
+	"main": "index.js"
 }

@@ -4,7 +4,6 @@ const api = require('./api');
 const utils = require('./utils')
 const path = require('path');
 const app = express();
-const port = process.env.EXPPORT || 80;
 
 app.use(express.json());
 app.use(cors());
@@ -32,9 +31,4 @@ app.get("*", (req, res) => {
   }
 });
 
-const server = app.listen(port, (err) => {
-  console.log(
-    `[EXPRESS@${server.address().address}${server.address().port}] Online and listening`
-  );
-});
-
+module.exports = app;
