@@ -1,14 +1,8 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-    res.status(200).json({
-        message: '🍕 Api route 🍕',
-    });
-});
-
 router.get('/message', (req, res) => {
     res.status(200).json({
-        message: '🍕 BY ORDER OF THE PEAKY BLINDERS 🍕',
+        message: 'Sample API Message',
     });
 });
 

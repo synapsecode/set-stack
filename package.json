@@ -10,16 +10,14 @@
 		"express": "^4.18.1"
 	},
 	"scripts": {
-		"client-install": "cd client && yarn",
-		"serve:server": "nodemon index.js",
-		"serve:client": "cd client && yarn dev",
+		"deps": "yarn && cd client && yarn",
 		"build": "cd client && yarn build",
 		"app": "concurrently \"node index.js\" \"cd client && yarn start\"",
-		"dev": "concurrently \"yarn serve:server\" \"yarn serve:client\"",
-		"prod":"APPMODE='PROD' node index.js",
-		"build-prod":"yarn build && yarn prod",
-		"vercel-deploy":"yarn build && vercel",
-		"vercel-deploy-prod":"yarn build && vercel --prod"
+		"dev": "concurrently \"nodemon index.js\" \"cd client && yarn dev\"",
+		"prod": "APPMODE='PROD' node index.js",
+		"build-prod": "yarn build && yarn prod",
+		"vercel-deploy": "yarn build && vercel",
+		"vercel-deploy-prod": "yarn build && vercel --prod"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.6"
